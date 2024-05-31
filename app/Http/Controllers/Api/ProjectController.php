@@ -16,4 +16,13 @@ class ProjectController extends Controller
             'projects' => $projects
         ]);
     }
+
+    public function latest()
+    {
+        $projects = Project::with('type', 'technologies')->take(3)->get();
+        return response()->json([
+            'success' => true,
+            'projects' => $projects
+        ]);
+    }
 }
