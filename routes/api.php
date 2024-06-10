@@ -23,3 +23,4 @@ Route::get('projects', [ProjectController::class, 'index']);
 Route::get('projects/{project}', [ProjectController::class, 'show']);
 Route::get('latest', [ProjectController::class, 'latest']);
 
+// Route::post('lead' [LeadController::class, 'store']);
